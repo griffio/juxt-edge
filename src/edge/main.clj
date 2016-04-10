@@ -17,7 +17,7 @@
 
              (let [system (->
                            (edge.system/new-production-system)
-                           com.stuartsierra.component/start)]
+                           (com.stuartsierra.component/start))]
 
                (println "System started")
                (println "Ready...")))))

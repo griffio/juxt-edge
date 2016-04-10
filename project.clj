@@ -21,10 +21,9 @@
    [ch.qos.logback/logback-classic "1.1.3" :exclusions [org.slf4j/slf4j-api]]
 
    ;; Config
-   [aero "0.1.5"]
+   [aleph "0.4.1"]
+   [bidi "1.24.0"]]
 
-
-   ]
 
   :main edge.main
 

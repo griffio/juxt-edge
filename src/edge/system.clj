@@ -4,24 +4,18 @@
   "Components and their dependency relationships"
   (:refer-clojure :exclude (read))
   (:require
-   [aero.core :as aero]
-   [com.stuartsierra.component :refer [system-map system-using using]]
-   [clojure.java.io :as io]
-   [clojure.string :as str]))
-
-(defn config [profile]
-  (let [f (io/file (System/getProperty "user.home") ".edge.edn")]
-    (-> (if (.exists f) f (io/resource "config.edn"))
-        (aero/read-config {:profile profile}))))
-
-(defn configure-system [system config]
-  (merge-with merge system config))
+    [clojure.java.io :as io]
+    [clojure.string :as str]
+    [com.stuartsierra.component :refer (system-map system-using using)]
+    [edge.webserver :refer [new-webserver new-database]]))
 
 (defn new-system-map []
-  (system-map))
+  (system-map
+    :webserver (new-webserver 3000)))
+
 
 (defn new-dependency-map []
-  {})
+  {:webserver {}})
 
 (defn new-production-system
   "Create the production system"

@@ -1,9 +1,13 @@
 # Edge
 
-From "Datum edge". Also represents the 'edge' of our current thinking
-on the baseline architecture of Clojure projects. It contains
-architectural patterns for the rapid construction of robust and
-flexible systems.
+webserver.clj
+~~~
+["/"
+      [
+       ["hello"  (yada "Hello World!\n")]
+       ["goodbye"  (yada "Goodbye World!\n")]
+       ["" (yada/handler (File. "target/dev"))]]]
+~~~
 
 ## Features
 

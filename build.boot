@@ -32,11 +32,11 @@
          '[io.dominic.boot-snippets :refer [with-env]])
 
 (def server-deps
-  '[[aleph "0.4.1-beta3"]
-    [bidi "1.24.0"]
+  '[[aleph "0.4.1"]
+    [bidi "2.0.6"]
     [hiccup "1.0.5"]
-    [org.omcljs/om "1.0.0-alpha28"]
-    [yada "1.1.0-20160126.014942-13"]
+    [org.omcljs/om "1.0.0-alpha32"]
+    [yada "1.1.5"]
 
     [com.stuartsierra/component "0.3.1"]
     
