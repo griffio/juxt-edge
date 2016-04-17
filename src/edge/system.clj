@@ -4,10 +4,8 @@
   "Components and their dependency relationships"
   (:refer-clojure :exclude (read))
   (:require
-    [clojure.java.io :as io]
-    [clojure.string :as str]
     [com.stuartsierra.component :refer (system-map system-using using)]
-    [edge.webserver :refer [new-webserver new-database]]))
+    [edge.webserver :refer [new-webserver]]))
 
 (defn new-system-map []
   (system-map

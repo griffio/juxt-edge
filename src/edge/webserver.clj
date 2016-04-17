@@ -14,22 +14,11 @@
      ["/"
       [
        ["hello"  (yada "Hello World!\n")]
+       ["content" (yada "Content!\n")]
        ["goodbye"  (yada "Goodbye World!\n")]
        ["" (yada/handler (File. "target/dev"))]]]
 
      {})])
-
-(defrecord DatabaseConnection []
-  Lifecycle
-  (start [component]
-    (println "Database starting!")
-    component)
-  (stop [component]
-    (println "Database stopping")
-    component))
-
-(defn new-database []
-  (->DatabaseConnection))
 
 (schema/defrecord Webserver [port :- schema/Int
                              server]
